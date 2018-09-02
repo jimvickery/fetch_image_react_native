@@ -21,6 +21,7 @@ export default class Products extends Component {
   componentDidMount() {
     this.setState({ fetching: true })
     fetch('https://hplussport.com/api/products.php')
+    // this line is for sillysnap images. Is a WIP to finish
     // fetch('http://www.sillysnap.com/api/v1/galleryapis')
       .then(response => response.json())
       .then(products => products.map(product => product.image))
